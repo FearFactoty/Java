@@ -1,0 +1,89 @@
+/**
+ * Lesson 1
+ *
+ * Akolzin Vladislav
+ *
+ * @dated 13.07.2021
+ *
+ * Так как первое задание не отображается в выводе, нумерацию заданий в выводе я вел от их отображения в командной строке.
+ */
+//1. Создать пустой проект в IntelliJ IDEA, создать класс HomeWorkApp, и прописать в нем метод main().
+package Lesson1;
+
+import com.sun.org.apache.xpath.internal.objects.XString;
+
+import javax.management.ValueExp;
+import java.util.Scanner;
+
+public class HomeWorkApp {
+    public static void main(String[] args){
+
+//Задание 2.
+        printThreeWords("Orange", "Banana", "Apple");
+//Задание 3.
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(" ");
+        System.out.println("Задание 2. Вычисление суммы переменных.");
+        System.out.println("Введите первое число");
+        int a1 = scanner.nextInt();
+        System.out.println("Введите второе число");
+        int a2 = scanner.nextInt();
+        System.out.println("Сумма переменных = " + checkSumSign(a1,a2));
+        int checksum = checkSumSign(a1,a2);
+        if (checksum >= 0) {
+            System.out.println("Сумма положительная");
+        }  else {System.out.println("Сумма отрицательная");
+        }
+//Задание 4.
+        System.out.println(" ");
+        System.out.println("Задание 3. Светофор");
+        System.out.println("Введите число");
+        int color = printColor(scanner.nextInt());
+        if (color <= 0){
+            System.out.println("Красный");
+        } else if (color > 100){
+            System.out.println("Зеленый");
+        } else {
+            System.out.println("Желтый");
+        }
+//Задание 5.   
+        System.out.println(" ");
+        System.out.println("Задание 4"); 
+        
+    }
+    //2. Создайте метод printThreeWords(), который при вызове должен отпечатать в столбец три слова: Orange, Banana, Apple.
+    public static void printThreeWords(String orange, String banana, String apple) {
+        System.out.println("Задание 1. Вывод трех слов в столбец");
+        System.out.println("Orange");
+        System.out.println("Banana");
+        System.out.println("Apple");
+    }
+
+/*        3. Создайте метод checkSumSign(), в теле которого объявите две int переменные a и b, и инициализируйте их любыми значениями, которыми захотите.
+        Далее метод должен просуммировать эти переменные, и если их сумма больше или равна 0,
+        то вывести в консоль сообщение “Сумма положительная”, в противном случае - “Сумма отрицательная”; */
+    public static int checkSumSign(int ValueA, int ValueB){
+        return ValueA + ValueB;
+    }
+    //4. Создайте метод printColor() в теле которого задайте int переменную value и инициализируйте ее любым значением.
+    //        Если value меньше 0 (0 включительно), то в консоль метод должен вывести сообщение “Красный”,
+    //        если лежит в пределах от 0 (0 исключительно) до 100 (100 включительно), то “Желтый”,
+    //        если больше 100 (100 исключительно) - “Зеленый”;
+    public static int printColor(int ValueX){
+        return ValueX;
+    }
+    //5. Создайте метод compareNumbers(), в теле которого объявите две int переменные a и b,
+    //        и инициализируйте их любыми значениями, которыми захотите.
+    //        Если a больше или равно b, то необходимо вывести в консоль сообщение “a >= b”, в противном случае “a < b”;
+public static int compareNumbers(int IntA, int IntB){
+        return IntA + IntB;
+}
+}
+
+/*
+
+        5. Создайте метод compareNumbers(), в теле которого объявите две int переменные a и b,
+        и инициализируйте их любыми значениями, которыми захотите.
+        Если a больше или равно b, то необходимо вывести в консоль сообщение “a >= b”, в противном случае “a < b”;
+
+        6. Методы из пунктов 2-5 вызовите из метода main() и посмотрите корректно ли они работают.*/
